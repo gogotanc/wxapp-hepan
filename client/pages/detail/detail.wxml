@@ -1,0 +1,53 @@
+<view wx:if="{{ display }}" class="container">
+    <view class="title">{{ topic.title }}</view>
+    <view class="content">
+        <view class="content-header">
+            <image class="content-header-avatar" src="{{ topic.icon }}"></image>
+            <view class="content-header-info">
+                <view class="content-header-name">{{ topic.author }}</view>
+                <view class="content-header-time">{{ topic.time }}</view>
+            </view>
+        </view>
+        <view class="content-detail">
+            <block wx:for="{{ topic.content }}" wx:key="infor">
+                <block wx:if="{{ item.type == 0 }}">
+                    <text class="content-text">{{ item.infor }}</text>
+                </block>
+                <view wx:elif="{{ item.type == 1 }}">
+                    <image src="{{ item.infor }}" bindtap="showImage" data-url="{{ item.infor }}" mode="aspectFit"></image>
+                </view>
+                <view wx:elif="{{ item.type == 3 }}">
+                    <audio src="{{ item.infor }}" controls loop></audio>
+                </view>
+                <block wx:elif="{{ item.type == 4 }}" selectable>
+                    <text class="content-text">{{ item.infor }}</text>
+                </block>
+                <view wx:else>
+                </view>
+            </block>
+        </view>
+    </view>
+
+    <block wx:for="{{ reply }}" wx:key="reply_id">
+        <view class="reply">
+            <view class="reply-header">
+                <image class="reply-header-avatar" src="{{ item.icon }}"></image>
+                <view class="reply-header-info">
+                    <view class="reply-header-name">{{ item.author }}</view>
+                    <view class="reply-header-time">{{ item.time }}</view>
+                </view>
+            </view>
+            <view class="reply-detail">
+                <view class="reply-quote" wx:if="{{ item.is_quote }}">
+                    <text class="quote-text">{{ item.quote_content }}</text>
+                </view>
+                <block wx:for="{{ item.content }}" wx:for-item="content" wx:key="infor">
+                    <text class="content-text" wx:if="{{ content.type == 0 }}">{{ content.infor }}</text>
+                    <image wx:elif="{{ content.type == 1 }}" src="{{ content.infor }}" bindtap="showImage" data-url="{{ content.infor }}" mode="aspectFit"></image>
+                    <audio wx:elif="{{ content.type == 3 }}" src="{{ content.infor }}" controls loop></audio>
+                    <text class="content-text" wx:elif="{{ content.type == 4 }}" selectable>{{ content.infor }}</text>
+                </block>
+            </view>
+        </view>
+    </block>
+</view>

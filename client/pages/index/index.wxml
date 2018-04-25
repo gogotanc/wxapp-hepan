@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view wx:if="{{ display }}" class="container">
+    <view class="tab-group">
+        <view class="tab-item {{ selectedTab == 1 ? 'tab-bottom' : '' }}" bindtap="tapTab" data-tabid="1"><text>最新回复</text></view>
+        <view class="tab-item {{ selectedTab == 2 ? 'tab-bottom' : '' }}" bindtap="tapTab" data-tabid="2"><text>最新发表</text></view>
+        <view class="tab-item {{ selectedTab == 3 ? 'tab-bottom' : '' }}" bindtap="tapTab" data-tabid="3"><text>今日热门</text></view>
+    </view>
+    <view class="topic-list {{ selectedTab == 1 ? 'show' : 'hidden' }}">
+        <block wx:for="{{ dataNewReply }}" wx:key="topic_id">
+            <view class="topic-item">
+                <image class="item-avatar" src="{{ item.userAvatar }}"></image>
+                <view class="item-content" data-topicid="{{ item.topic_id }}" bindtap="viewDetail">
+                    <view class="item-content-header">
+                        <view class="item-content-username">{{ item.user_nick_name }}</view>
+                        <view class="item-content-time">
+                            <text class="node-name">{{ item.board_name }}</text>
+                        </view>
+                    </view>
+                    <view class="item-content-title">{{ item.title }}</view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class="topic-list {{ selectedTab == 2 ? 'show' : 'hidden' }}">
+        <block wx:for="{{ dataNewPublish }}" wx:key="topic_id">
+            <view class="topic-item">
+                <image class="item-avatar" src="{{ item.userAvatar }}"></image>
+                <view class="item-content" data-topicid="{{ item.topic_id }}" bindtap="viewDetail">
+                    <view class="item-content-header">
+                        <view class="item-content-username">{{ item.user_nick_name }}</view>
+                        <view class="item-content-time">
+                            <text class="node-name">{{ item.board_name }}</text>
+                        </view>
+                    </view>
+                    <view class="item-content-title">{{ item.title }}</view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class="topic-list {{ selectedTab == 3 ? 'show' : 'hidden' }}">
+        <block wx:for="{{ dataHot }}" wx:key="source_id">
+            <view class="topic-item">
+                <image class="item-avatar" src="{{ item.userAvatar }}"></image>
+                <view class="item-content" data-topicid="{{ item.source_id }}" bindtap="viewDetail">
+                    <view class="item-content-header">
+                        <view class="item-content-username">{{ item.user_nick_name }}</view>
+                        <view class="item-content-time">
+                            <text class="node-name">{{ item.board_name }}</text>
+                        </view>
+                    </view>
+                    <view class="item-content-title">{{ item.title }}</view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

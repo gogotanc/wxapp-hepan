@@ -1,0 +1,103 @@
+@import "../../index.wxss";
+
+.title {
+    width: 100%;
+
+    font-size: 18pt;
+
+    padding: 20rpx;
+    border-bottom: 1rpx solid #eee;
+
+    box-sizing: border-box;
+}
+
+.content {
+    width: 100%;
+
+    padding: 20rpx 10rpx 20rpx 20rpx;
+    border-bottom: 2px solid #eee;
+    box-sizing: border-box;
+}
+
+.content-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.content-header-avatar {
+    width: 80rpx;
+    height: 80rpx;
+
+    margin-right: 20rpx;
+    border-radius: 100%;
+}
+
+.content-header-info {
+}
+
+.content-header-name {
+    font-size: 12pt;
+    color: #888888;
+}
+
+.content-header-time {
+    font-size: 10pt;
+    color: #b2b2b2;
+}
+
+
+.content-detail {
+    padding-top: 10rpx;
+}
+
+.content-text {
+    display: inline;
+}
+
+/* 回复样式 */
+.reply {
+    width: 100%;
+
+    padding: 20rpx 10rpx 20rpx 20rpx;
+    border-bottom: 2px solid #eee;
+    box-sizing: border-box;
+}
+
+.reply-header {
+    display: flex;
+    flex-direction: row;
+
+    box-sizing: border-box;
+}
+
+.reply-header-avatar {
+    width: 80rpx;
+    height: 80rpx;
+    margin-right: 20rpx;
+    border-radius: 100%;
+}
+
+.reply-header-name {
+    font-size: 12pt;
+    color: #888888;
+}
+
+.reply-header-time {
+    font-size: 10pt;
+    color: #b2b2b2;
+}
+
+.reply-quote {
+    background-color: #eeeeee;
+    margin-bottom: 10rpx;
+    margin-right: 10rpx;
+    padding: 10rpx 20rpx 10rpx 20rpx
+}
+
+.quote-text {
+    font-size: 10pt;
+}
+
+.reply-detail {
+    padding-top: 10rpx;
+}

@@ -1,0 +1,161 @@
+/**app.wxss**/
+/* 使用 * 无效 */
+/*.box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}*/
+
+page {
+    height: 100%;
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* tab 导航相关 */
+.tab-group {
+    width: 100%;
+    height: 100rpx;
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    border-bottom: 2rpx solid #eee;
+}
+
+.tab-item {
+    height: 100%;
+    width: 33.3%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tab-bottom {
+    border-bottom: 1rpx solid #3594f2;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+/* topic 相关 */
+.topic-list {
+    flex: 1;
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.topic-item {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 20rpx;
+    border-bottom: 1rpx solid #eee;
+    box-sizing: border-box;
+}
+
+.item-avatar {
+    width:128rpx;
+    height:128rpx;
+
+    border-radius:100%;
+
+    margin-right:20rpx;
+}
+
+.item-content {
+    width: 562rpx;
+    height: auto;   
+}
+
+.item-content-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item-content-username {
+    font-size: 12pt;
+    color: #888888;
+}
+
+.item-content-time {
+    margin-right: 0rpx;
+    font-size: 10pt;
+    color: #b2b2b2;
+}
+
+.node-name {
+    display: inline-block;
+    padding: 5rpx 10rpx;
+    border-radius: 5rpx;
+    background-color: #eee;
+}
+
+.item-content-title {
+    font-size: 14pt;
+    color: #000000;
+}
+
+
+.tab-row {
+    height: 66rpx;
+    width: 750rpx;
+
+    text-align: center;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+    margin-top: 50rpx;
+    box-sizing: border-box;
+    border-bottom: 2rpx solid #ccc;
+}
+
+.tab-item {
+    width: 33.3%;
+    color: #434343;
+}
+
+.tab-item-active {
+    color: #f65959;
+    border-bottom: 4rpx solid #f65959;
+}
+
