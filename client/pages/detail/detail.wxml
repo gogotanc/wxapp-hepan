@@ -38,7 +38,7 @@
                 </view>
             </view>
             <view class="reply-detail">
-                <view class="reply-quote" wx:if="{{ item.is_quote }}">
+                <view class="reply-quote" wx:if="{{ item.is_quote && item.quote_content != '' }}">
                     <text class="quote-text">{{ item.quote_content }}</text>
                 </view>
                 <block wx:for="{{ item.content }}" wx:for-item="content" wx:key="infor">

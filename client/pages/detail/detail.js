@@ -123,9 +123,11 @@ Page({
     onPullDownRefresh: function() {
         var that = this
         wx.request({
-            url: 'https://bbs.gogotanc.cn/detail',
+            // url: 'https://bbs.gogotanc.cn/detail',
+            url: 'https://bbs.gogotanc.cn/transfer',
             method: 'POST',
             data: {
+                r: 'forum/postlist',
                 accessToken: app.globalData.loginFlag ? app.globalData.userInfo.token : '',
                 accessSecret: app.globalData.loginFlag ? app.globalData.userInfo.secret : '',
                 topicId: that.data.topicId,
@@ -195,9 +197,11 @@ Page({
         var currentPage = that.data.page
         var nextPage = currentPage + 1
         wx.request({
-            url: 'https://bbs.gogotanc.cn/detail',
+            // url: 'https://bbs.gogotanc.cn/detail',
+            url: 'https://bbs.gogotanc.cn/transfer',
             method: 'POST',
             data: {
+                r: 'forum/postlist',
                 accessToken: app.globalData.loginFlag ? app.globalData.userInfo.token : '',
                 accessSecret: app.globalData.loginFlag ? app.globalData.userInfo.secret : '',
                 topicId: that.data.topicId,

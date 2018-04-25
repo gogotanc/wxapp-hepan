@@ -41,7 +41,7 @@ Page({
 
         that.setData({
             selectedTab: tabId
-    })
+        })
 
         if (tabId == 1 && that.data.dataNewReply == null) {
             wx.startPullDownRefresh()
@@ -71,9 +71,11 @@ Page({
             // 刷新最新回复的数据
             console.log(tabId)
             wx.request({
-                url: 'https://bbs.gogotanc.cn/topic',
+                // url: 'https://bbs.gogotanc.cn/topic',
+                url: 'https://bbs.gogotanc.cn/transfer',
                 method: 'POST',
                 data: {
+                    r: 'forum/topiclist',
                     accessToken: app.globalData.loginFlag ? app.globalData.userInfo.token : '',
                     accessSecret: app.globalData.loginFlag ? app.globalData.userInfo.secret : '',
                     // page: that.data.page,
@@ -100,10 +102,11 @@ Page({
             // 刷新最新发表的数据
             console.log(tabId)
             wx.request({
-                //url: 'http://bbs.uestc.edu.cn/mobcent/app/web/index.php',
-                url: 'https://bbs.gogotanc.cn/topic',
+                // url: 'https://bbs.gogotanc.cn/topic',
+                url: 'https://bbs.gogotanc.cn/transfer',
                 method: 'POST',
                 data: {
+                    r: 'forum/topiclist',
                     accessToken: app.globalData.loginFlag ? app.globalData.userInfo.token : '',
                     accessSecret: app.globalData.loginFlag ? app.globalData.userInfo.secret : '',
                     // page: that.data.page,
@@ -130,7 +133,7 @@ Page({
             // 刷新今日热门的数据
             console.log(tabId)
             wx.request({
-                //url: 'http://bbs.uestc.edu.cn/mobcent/app/web/index.php',
+                // url: 'http://bbs.uestc.edu.cn/mobcent/app/web/index.php',
                 url: 'https://bbs.gogotanc.cn/hot',
                 method: 'POST',
                 data: {
