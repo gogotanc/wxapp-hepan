@@ -134,11 +134,13 @@ Page({
             console.log(tabId)
             wx.request({
                 // url: 'http://bbs.uestc.edu.cn/mobcent/app/web/index.php',
-                url: 'https://bbs.gogotanc.cn/hot',
+                url: 'https://bbs.gogotanc.cn/transfer',
                 method: 'POST',
                 data: {
+                    r: 'portal/newslist',
                     accessToken: app.globalData.loginFlag ? app.globalData.userInfo.token : '',
                     accessSecret: app.globalData.loginFlag ? app.globalData.userInfo.secret : '',
+                    moduleId: '2'
                 },
                 header: {
                     'content-type': 'application/x-www-form-urlencoded'
