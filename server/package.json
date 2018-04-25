@@ -1,0 +1,20 @@
+{
+  "name": "bbs-server",
+  "version": "1.0.0",
+  "description": "small pro",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "small"
+  ],
+  "author": "tanc",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "request": "^2.85.0"
+  }
+}
