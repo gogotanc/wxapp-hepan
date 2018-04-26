@@ -184,7 +184,7 @@ Page({
         // 没有内容了
         if (!that.data.hasNext) {
             wx.showToast({
-                title: '已经到底了。',
+                title: '已经到底咯。',
                 icon: 'none',
                 duration: 1500
             })

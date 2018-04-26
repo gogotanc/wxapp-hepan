@@ -29,7 +29,7 @@
 </view>
 
 <view wx:else class="container">
-    <image class="logo" src="../../images/paper.png"></image>
+    <image class="logo" src="../../images/logo.png"></image>
 
     <form bindsubmit="submitForm">
         <view class="zan-panel">

@@ -1,7 +1,7 @@
 //app.js
 
 const URL = 'https://bbs.gogotanc.cn'
-// const URL = 'https://bbs.gogotanc.cn'
+// const URL = 'http://bbs.uestc.edu.cn/mobcent/app/web/index.php'
 
 App({
     onLaunch: function () {
