@@ -17,6 +17,15 @@ Page({
         reply: []
     },
 
+    // 分享
+    onShareAppMessage: function (res) {
+        return {
+            title: '清水河畔小程序 - 水水更健康',
+            path: '/pages/detail/detail?topicId=' + this.data.topicId
+        }
+    },
+
+    // 点击图片查看大图
     showImage: function (e) {
         var url = e.currentTarget.dataset.url
         wx.previewImage({
