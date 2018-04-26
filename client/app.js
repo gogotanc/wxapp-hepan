@@ -1,4 +1,8 @@
 //app.js
+
+const URL = 'https://bbs.gogotanc.cn'
+// const URL = 'https://bbs.gogotanc.cn'
+
 App({
     onLaunch: function () {
         let that = this
@@ -30,6 +34,7 @@ App({
     },
 
     globalData: {
+        url: URL,
         loginFlag: false,
         userInfo: null
     }

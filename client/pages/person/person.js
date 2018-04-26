@@ -46,8 +46,7 @@ Page({
         let password = e.detail.value.password
         // 登录请求
         wx.request({
-            // url: 'https://bbs.gogotanc.cn/login',
-            url: 'https://bbs.gogotanc.cn/transfer',
+            url: app.globalData.url,
             method: 'POST',
             data: {
                 r: 'user/login',

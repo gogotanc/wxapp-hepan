@@ -71,8 +71,7 @@ Page({
             // 刷新最新回复的数据
             console.log(tabId)
             wx.request({
-                // url: 'https://bbs.gogotanc.cn/topic',
-                url: 'https://bbs.gogotanc.cn/transfer',
+                url: app.globalData.url,
                 method: 'POST',
                 data: {
                     r: 'forum/topiclist',
@@ -102,8 +101,7 @@ Page({
             // 刷新最新发表的数据
             console.log(tabId)
             wx.request({
-                // url: 'https://bbs.gogotanc.cn/topic',
-                url: 'https://bbs.gogotanc.cn/transfer',
+                url: app.globalData.url,
                 method: 'POST',
                 data: {
                     r: 'forum/topiclist',
@@ -133,8 +131,7 @@ Page({
             // 刷新今日热门的数据
             console.log(tabId)
             wx.request({
-                // url: 'http://bbs.uestc.edu.cn/mobcent/app/web/index.php',
-                url: 'https://bbs.gogotanc.cn/transfer',
+                url: app.globalData.url,
                 method: 'POST',
                 data: {
                     r: 'portal/newslist',

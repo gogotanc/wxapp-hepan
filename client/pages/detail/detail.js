@@ -123,8 +123,7 @@ Page({
     onPullDownRefresh: function() {
         var that = this
         wx.request({
-            // url: 'https://bbs.gogotanc.cn/detail',
-            url: 'https://bbs.gogotanc.cn/transfer',
+            url: app.globalData.url,
             method: 'POST',
             data: {
                 r: 'forum/postlist',
@@ -197,8 +196,7 @@ Page({
         var currentPage = that.data.page
         var nextPage = currentPage + 1
         wx.request({
-            // url: 'https://bbs.gogotanc.cn/detail',
-            url: 'https://bbs.gogotanc.cn/transfer',
+            url: app.globalData.url,
             method: 'POST',
             data: {
                 r: 'forum/postlist',

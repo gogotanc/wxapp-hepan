@@ -40,8 +40,7 @@ Page({
     onPullDownRefresh: function() {
         var that = this
         wx.request({
-            // url: 'https://bbs.gogotanc.cn/detail',
-            url: 'https://bbs.gogotanc.cn/transfer',
+            url: app.globalData.url,
             method: 'POST',
             data: {
                 r: 'forum/topiclist',
