@@ -1,0 +1,39 @@
+.forum-title {
+    height: 120rpx;
+    line-height: 120rpx;
+    border-bottom: 2rpx solid #ddd;
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+}
+
+.forum-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2rpx solid #ddd;
+}
+
+.forum-name {
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 14px;
+    color: #333;
+
+    margin-left: 20rpx;
+}
+
+.forum-td {
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-right: 20rpx;
+}
+
+.forum-td-text {
+    font-size: 10pt;
+    color: #888;
+}
+
+.tap-tap {
+    background-color: #ddd;
+}
