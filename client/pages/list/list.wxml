@@ -1,0 +1,19 @@
+<!-- list.wxml -->
+<view wx:if="{{ !loading }}" class="container">
+    <view class="topic-list">
+        <block wx:for="{{ info.topicList }}" wx:key="topic_id">
+            <view class="topic-item">
+                <image class="item-avatar" src="{{ item.userAvatar }}"></image>
+                <view class="item-content" data-topicid="{{ item.topic_id }}" bindtap="viewDetail">
+                    <view class="item-content-header">
+                        <view class="item-content-username">{{ item.user_nick_name }}</view>
+                        <view class="item-content-time">
+                            <text class="node-name">{{ item.board_name }}</text>
+                        </view>
+                    </view>
+                    <view class="item-content-title">{{ item.title }}</view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

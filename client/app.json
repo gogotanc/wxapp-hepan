@@ -1,30 +1,41 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
+    "pages/forum/forum",
     "pages/person/person",
+    "pages/list/list",
     "pages/detail/detail"
   ],
-  "window":{
+  "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#3594f2",
     "navigationBarTitleText": "清水河畔",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
-      "color": "#888888",
-      "selectedColor": "#3594f2",
-      "backgroundColor":"#fff",
-      "borderStyle":"white",
-      "list": [{
-          "pagePath": "pages/index/index",
-          "text": "首页",
-          "iconPath": "images/home.png",
-          "selectedIconPath": "images/home_on.png"
-      },{
-          "pagePath": "pages/person/person",
-          "text": "个人",
-          "iconPath": "images/person.png",
-          "selectedIconPath": "images/person_on.png"
-      }]
+    "color": "#888888",
+    "selectedColor": "#3594f2",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_on.png"
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "text": "版块",
+        "iconPath": "images/forum.png",
+        "selectedIconPath": "images/forum_on.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "个人",
+        "iconPath": "images/person.png",
+        "selectedIconPath": "images/person_on.png"
+      }
+    ]
   }
 }
