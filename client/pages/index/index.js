@@ -13,7 +13,12 @@ Page({
         selectedTab: 1,
 
         dataNewReply: null,
+        replyPage: 1,
+        moreReply: true,
+
         dataNewPublish: null,
+        publishPage: 1,
+
         dataHot: null,
     },
 
@@ -71,7 +76,7 @@ Page({
                     accessToken: app.globalData.loginFlag ? app.globalData.userInfo.token : '',
                     accessSecret: app.globalData.loginFlag ? app.globalData.userInfo.secret : '',
                     page: '1',
-                    pageSize: '30',
+                    pageSize: '20',
                     sortby: 'all',
                     // filterType: 'sortid',
                     // topOrder: '0'
@@ -97,7 +102,7 @@ Page({
                     accessToken: app.globalData.loginFlag ? app.globalData.userInfo.token : '',
                     accessSecret: app.globalData.loginFlag ? app.globalData.userInfo.secret : '',
                     page: '1',
-                    pageSize: '30',
+                    pageSize: '20',
                     sortby: 'publish',
                     // filterType: 'sortid',
                     // topOrder: '0'
@@ -140,20 +145,96 @@ Page({
         }
     },
 
-    // 触底触发的函数，提示已经到底了
+    // 加载更多
     onReachBottom: function () {
 
+        var that = this
+        var tabId = that.data.selectedTab
+
+        if ( tabId == 3 ) {
+            // 今日热门没有更多
+            return
+        }
+
         if (isBottomFuncRunning) {
+            wx.showToast({
+                title: '拼命加载中。',
+                icon: 'none',
+                duration: 800
+            })
             return
         }
         isBottomFuncRunning = true
 
-        wx.showToast({
-            title: '已经到底咯。',
-            icon: 'none',
-            duration: 1000
-        })
+        if ( tabId == 1 ) {
+            // 加载更多最新回复的数据
+            var nextPage = that.data.replyPage + 1;
+            wx.request({
+                url: app.globalData.url,
+                method: 'POST',
+                data: {
+                    r: 'forum/topiclist',
+                    accessToken: app.globalData.loginFlag ? app.globalData.userInfo.token : '',
+                    accessSecret: app.globalData.loginFlag ? app.globalData.userInfo.secret : '',
+                    page: nextPage,
+                    pageSize: '20',
+                    sortby: 'all',
+                    // filterType: 'sortid',
+                    // topOrder: '0'
+                },
+                header: {
+                    'content-type': 'application/x-www-form-urlencoded'
+                },
+                success: function(res) {
 
+                    console.log(res.data.list)
+
+                    // 处理返回的数据
+                    var newList = utils.unique(that.data.dataNewReply.concat(res.data.list))
+
+                    that.setData({
+                        display: true,
+                        replyPage: nextPage,
+                        dataNewReply: newList
+                    })
+                }
+            })
+        } else if (tabId == 2) {
+            // 加载更多最新发表的数据
+            var nextPage = that.data.publishPage + 1;
+            wx.request({
+                url: app.globalData.url,
+                method: 'POST',
+                data: {
+                    r: 'forum/topiclist',
+                    accessToken: app.globalData.loginFlag ? app.globalData.userInfo.token : '',
+                    accessSecret: app.globalData.loginFlag ? app.globalData.userInfo.secret : '',
+                    page: nextPage,
+                    pageSize: '20',
+                    sortby: 'publish',
+                    // filterType: 'sortid',
+                    // topOrder: '0'
+                },
+                header: {
+                    'content-type': 'application/x-www-form-urlencoded'
+                },
+                success: function(res) {
+
+                    console.log(res.data.list)
+
+                    // 处理返回的数据
+                    var newList = utils.unique(that.data.dataNewPublish.concat(res.data.list))
+
+                    that.setData({
+                        display: true,
+                        publishPage: nextPage,
+                        dataNewPublish: newList
+                    })
+                }
+            })
+        }
+
+        // 5 秒内只能请求一次
         setTimeout(() => {
             isBottomFuncRunning = false
         }, 5000);

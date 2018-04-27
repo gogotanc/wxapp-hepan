@@ -149,7 +149,7 @@ Page({
             success: function(res) {
                 console.log(res)
 
-                // 请求出错的处理
+                // 请求出错的处理，理论上只会出现未登录的错误
                 if (res.data.rs == 0) {
                     wx.stopPullDownRefresh() 
                     wx.showToast({
@@ -194,7 +194,7 @@ Page({
         // 防止多次触发
         if (bottomRunning == true) {
             wx.showToast({
-                title: '加载中。。。',
+                title: '拼命加载中。。。',
                 icon: 'none',
                 duration: 800
             })
@@ -248,9 +248,10 @@ Page({
             }
         })
 
+        // 5 秒内只能请求一次
         setTimeout(function(){
             bottomRunning = false
-        }, 3000)
+        }, 5000)
     },
 
     // 生命周期函数
