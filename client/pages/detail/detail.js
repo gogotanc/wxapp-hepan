@@ -17,7 +17,20 @@ Page({
         reply: []
     },
 
-    // 点击转发按钮
+    // 点击回复帖子
+    replyTopic: function () {
+        var tid = this.data.topic.id
+        console.log(tid)
+    },
+
+    // 点击回复评论
+    replyReply: function (e) {
+        var rid = e.currentTarget.dataset.rid
+        var tid = this.data.topic.id
+        console.log(e.currentTarget.dataset.rid)
+    },
+
+    // 点击转发按钮触发的事件
     share: function () {
         wx.showShareMenu({
             withShareTicket: true
@@ -93,6 +106,7 @@ Page({
         /* 
         topic 包含的内容
         topic = {
+            id: '',
             title: '帖子的名称',
             icon: '',
             author: '',
@@ -120,6 +134,7 @@ Page({
                 content.push(tmp)
             }
             topic = {
+                id: tmpTopic.topic_id,
                 title: tmpTopic.title,
                 icon: tmpTopic.icon,
                 author: tmpTopic.user_nick_name,

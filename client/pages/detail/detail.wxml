@@ -33,7 +33,7 @@
             </view>
             <view class="bottom-right">
                 <button class="share-btn" open-type="share">转发</button>
-                <!-- <button class="share-btn" open-type="share">评论</button> -->
+                <view class="reply-check" bindtap="replyTopic">评论</view>
             </view>
         </view>
     </view>
@@ -42,9 +42,12 @@
         <view class="reply">
             <view class="reply-header">
                 <image class="reply-header-avatar" src="{{ item.icon }}"></image>
-                <view class="reply-header-info">
-                    <view class="reply-header-name">{{ item.author }}</view>
-                    <view class="reply-header-time">{{ item.time }}</view>
+                <view class="reply-header-container">
+                    <view class="reply-header-info">
+                        <view class="reply-header-name">{{ item.author }}</view>
+                        <view class="reply-header-time">{{ item.time }}</view>
+                    </view>
+                    <view class="reply-check" bindtap="replyReply" data-rid="{{ item.reply_id }}">评论</view>
                 </view>
             </view>
             <view class="reply-detail">
