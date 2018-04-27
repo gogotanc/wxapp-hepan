@@ -7,6 +7,15 @@ Page({
         userInfo: {}
     },
 
+    // 查看主题、评论、发表过的主题列表
+    viewList: function (e) {
+        console.log(e)
+        var type = e.currentTarget.dataset.type
+        wx.navigateTo({
+            url: '../my/my?type=' + type,
+        })
+    },
+
     // 用户退出登录
     logout: function () {
         var that = this
