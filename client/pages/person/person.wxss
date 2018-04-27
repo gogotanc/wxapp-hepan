@@ -1,11 +1,140 @@
-@import "../../index.wxss";
-
 .logo {
     display: block;
     margin: 50px auto;
     width: 100px;
     height: 100px;
     border-radius:100%;
+}
+
+/* 表单显示 */
+.form-panel {
+    display: flex;
+    flex-direction: column;
+    border-top: 2rpx solid #eee;
+    border-bottom: 2rpx solid #eee;
+    margin: 10rpx 0;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0 0 0 30rpx;
+    border-bottom: 2rpx solid #eee;
+}
+
+.form-label {
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 14px;
+    min-width: 160rpx;
+    padding-right: 10rpx;
+}
+
+.form-input {
+    flex: 1;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 14px;
+}
+
+.form-placeholder {
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 14px;
+}
+
+.form-btn-group {
+    display: flex;
+    flex-direction: column;
+    margin: 30rpx;
+}
+
+.form-btn {
+    width: 100%;
+    position:relative;
+    color:#333;
+    background-color:#fff;
+    margin-bottom:10px;
+    padding-left:15px;
+    padding-right:15px;
+    border-radius:2px;
+    font-size:16px;
+    line-height:45px;
+    height:45px;
+    box-sizing:border-box;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.form-btn-primary {
+    color: #fff;
+    background-color: #3594f2;
+}
+
+.form-btn:last-child {
+    margin-bottom: 0;
+}
+
+/* 单元格显示 */
+.panel-title {
+    font-size: 14px;
+    line-height: 1;
+    color: #999;
+    padding: 40rpx 15rpx 10rpx 15rpx;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    border-top: 2rpx solid #eee;
+    border-bottom: 2rpx solid #eee;
+    margin: 10rpx 0;
+}
+
+.panel-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 0 30rpx;
+    border-bottom: 2rpx solid #eee;
+}
+
+.panel-item:last-child {
+    border-bottom: none;
+}
+
+.panel-header {
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 14px;
+}
+
+.panel-content {
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 14px;
+    color: #666;
+    padding-right: 30rpx;
+}
+
+.panel-right {
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #666;
+    border-right: 2px solid #666;
+    transform: rotate(45deg);
+    margin: auto 30rpx auto 0;
+}
+
+.panel-right-bak {
+    border: 5px solid transparent;
+    border-left: 10px solid #888;
+    width: 0;
+    height: 0px;
+    margin: auto 0;
+    padding-right: 30rpx;
 }
 
 .zan-btn--primary {

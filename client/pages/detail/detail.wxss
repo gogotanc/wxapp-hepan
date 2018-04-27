@@ -1,5 +1,3 @@
-@import "../../index.wxss";
-
 .title {
     width: 100%;
 

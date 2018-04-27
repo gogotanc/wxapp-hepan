@@ -1,29 +1,45 @@
 <!--person.wxml-->
 <view wx:if="{{ loginFlag }}" class="container">
+
     <image class="logo" src="{{ userInfo.avatar }}"></image>
-    <view class="zan-panel-title">个人信息</view>
-    <view class="zan-panel">
-        <view class="zan-cell">
-            <view class="zan-cell__bd">昵称</view>
-            <view class="zan-cell__ft">{{ userInfo.userName }}</view>
+
+    <view class="panel-title">个人信息</view>
+
+    <view class="panel">
+        <view class="panel-item">
+            <view class="panel-header">昵称</view>
+            <view class="panel-content">{{ userInfo.userName }}</view>
         </view>
-        <view class="zan-cell">
-            <view class="zan-cell__bd">等级</view>
-            <view class="zan-cell__ft">{{ userInfo.userTitle}}</view>
+        <view class="panel-item">
+            <view class="panel-header">等级</view>
+            <view class="panel-content">{{ userInfo.userTitle}}</view>
         </view>
-        <view class="zan-cell">
-            <view class="zan-cell__bd">积分</view>
-            <view class="zan-cell__ft">{{ userInfo.creditShowList[0].data }}</view>
+        <view class="panel-item">
+            <view class="panel-header">积分</view>
+            <view class="panel-content">{{ userInfo.creditShowList[0].data }}</view>
         </view>
-        <view class="zan-cell">
-            <view class="zan-cell__bd">水滴</view>
-            <view class="zan-cell__ft">{{ userInfo.creditShowList[1].data }}</view>
+        <view class="panel-item">
+            <view class="panel-header">水滴</view>
+            <view class="panel-content">{{ userInfo.creditShowList[1].data }}</view>
+        </view>
+        <view class="panel-item">
+            <view class="panel-header">主题</view>
+            <view class="panel-right"></view>
+        </view>
+        <view class="panel-item">
+            <view class="panel-header">收藏</view>
+            <view class="panel-right"></view>
+        </view>
+        <view class="panel-item">
+            <view class="panel-header">回复</view>
+            <view class="panel-right"></view>
         </view>
     </view>
-    <view class="zan-panel">
-        <view class="zan-cell">
-            <view class="zan-cell__bd" bindtap="logout">退出</view>
-            <view class="zan-cell__ft"></view>
+
+    <view class="panel">
+        <view class="panel-item" bindtap="logout">
+            <view class="panel-header">退出</view>
+            <view class="panel-content"></view>
         </view>
     </view>
 </view>
@@ -32,18 +48,18 @@
     <image class="logo" src="../../images/logo.png"></image>
 
     <form bindsubmit="submitForm">
-        <view class="zan-panel">
-            <view class="zan-cell zan-field">
-                <view class="zan-cell__hd zan-field__title">用户名</view>
-                <input bindinput="" class="zan-field__input zan-cell__bd" data-component-id="" name="username" placeholder="请输入用户名" placeholder-class="zan-field__placeholder" type="text" value=""></input>
+        <view class="form-panel">
+            <view class="form-item">
+                <view class="form-label">用户名</view>
+                <input class="form-input" name="username" placeholder="请输入用户名" placeholder-class="form-placeholder" type="text"></input>
             </view>
-            <view class="zan-cell zan-field">
-                <view class="zan-cell__hd zan-field__title">密码</view>
-                <input bindinput="" class="zan-field__input zan-cell__bd" data-component-id="" name="password" placeholder="请输入密码" placeholder-class="zan-field__placeholder" type="text" value="" password></input>
+            <view class="form-item">
+                <view class="form-label">密码</view>
+                <input class="form-input" name="password" placeholder="请输入密码" placeholder-class="form-placeholder" type="text" password></input>
             </view>
-            <view class="zan-btns">
-                <button class="zan-btn zan-btn--primary" form-type="submit">确认登录</button>
-                <button class="zan-btn" form-type="reset">重置数据</button>
+            <view class="form-btn-group">
+                <button class="form-btn form-btn-primary" form-type="submit">确认登录</button>
+                <button class="form-btn" form-type="reset">重置数据</button>
             </view>
         </view>
     </form>
