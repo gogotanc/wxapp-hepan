@@ -14,6 +14,15 @@ Page({
         list: []
     },
 
+    viewDetail: function (e) {
+        console.log(e)
+        var topicId = e.currentTarget.dataset.topicid
+
+        wx.navigateTo({
+            url: '../detail/detail?topicId=' + topicId
+        })
+    },
+
     // 下拉刷新获取所有版块的数据
     onPullDownRefresh: function() {
         var that = this

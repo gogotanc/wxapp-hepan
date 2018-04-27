@@ -22,16 +22,16 @@
             <view class="panel-header">水滴</view>
             <view class="panel-content">{{ userInfo.creditShowList[1].data }}</view>
         </view>
-        <view class="panel-item" bindtap="viewList" data-type="topic">
-            <view class="panel-header">主题</view>
+        <view class="panel-item" bindtap="viewList" hover-class="tap-tap" data-type="topic">
+            <view class="panel-header">发表的主题</view>
             <view class="panel-right"></view>
         </view>
-        <view class="panel-item" bindtap="viewList" data-type="favorite">
-            <view class="panel-header">收藏</view>
+        <view class="panel-item" bindtap="viewList" hover-class="tap-tap" data-type="favorite">
+            <view class="panel-header">收藏的主题</view>
             <view class="panel-right"></view>
         </view>
-        <view class="panel-item" bindtap="viewList" data-type="reply">
-            <view class="panel-header">回复</view>
+        <view class="panel-item" bindtap="viewList" hover-class="tap-tap" data-type="reply">
+            <view class="panel-header">评论的主题</view>
             <view class="panel-right"></view>
         </view>
     </view>

@@ -1,13 +1,13 @@
 <view class="container">
     <block wx:for="{{ list }}" wx:key="voard_category_id">
-        <view class="forum-title">--- {{ item.board_category_name }} ---</view>
-        <block wx:for="{{ item.board_list }}" wx:key="board_id" wx:for-item="forum">
-            <view class="forum-item" hover-class="tap-tap" bindtap="viewList" data-id="{{ forum.board_id }}">
-                <view class="forum-name">{{ forum.board_name }}</view>
-                <view class="forum-td" wx:if="{{ forum.td_posts_num > 0}}">
-                    <text class="forum-td-text">{{ forum.td_posts_num }}</text>
+        <view class="panel-title">{{ item.board_category_name }}</view>
+        <view class="panel">
+            <block wx:for="{{ item.board_list }}" wx:key="board_id" wx:for-item="forum">
+                <view class="panel-item" hover-class="tap-tap" bindtap="viewList" data-id="{{ forum.board_id }}">
+                    <view class="panel-header">{{ forum.board_name }}</view>
+                    <view class="panel-content">{{ forum.td_posts_num > 0 ? forum.td_posts_num : '' }}</view>
                 </view>
-            </view>
-        </block>
+            </block>
+        </view>
     </block>
 </view>
