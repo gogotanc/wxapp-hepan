@@ -17,6 +17,13 @@ Page({
         reply: []
     },
 
+    // 点击转发按钮
+    share: function () {
+        wx.showShareMenu({
+            withShareTicket: true
+        })
+    },
+
     // 分享
     onShareAppMessage: function (res) {
         return {
@@ -90,7 +97,8 @@ Page({
             icon: '',
             author: '',
             time: '',
-            comments: 34,
+            replies: 34,
+            hits: 234,
             content: [],
         }
         */
@@ -116,6 +124,8 @@ Page({
                 icon: tmpTopic.icon,
                 author: tmpTopic.user_nick_name,
                 time: util.formatTime(new Date(parseInt(tmpTopic.create_date))),
+                replies: tmpTopic.replies,
+                hits: tmpTopic.hits,
                 content: content
             }
         }
@@ -155,10 +165,22 @@ Page({
                     wx.showToast({
                         title: res.data.errcode,
                         icon: 'none',
-                        duration: 2000,
+                        duration: 1500,
                         mask: true,
                         success: () => {}
                     });
+
+                    var err = res.data.head.errCode
+                    console.log(err)
+
+                    // 如果是未登录，或者游客身份，则跳转到登录页面
+                    if (err == '00200102' || err == '06000001') {
+                        setTimeout(function () {
+                            wx.switchTab({
+                                url: '../person/person'
+                            })
+                        }, 1500)
+                    }
                     return
                 }
 

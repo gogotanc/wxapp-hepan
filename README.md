@@ -71,3 +71,13 @@ http://bbs.uestc.edu.cn/mobcent/app/web/index.php
 #### 4、其他不重要的内容
 
 对评论的点评内容目前无法显示，还有投票功能也没有支持。
+
+### 参考
+
+河畔 API 通过参考了下面几个库整理得到，这里表示感谢。
+
+[UESTC-BBS/API-Docs](https://github.com/UESTC-BBS/API-Docs)
+
+[XuChunH/CampusBBS](https://github.com/XuChunH/CampusBBS)
+
+[yiyuanliu/Hepan](https://github.com/yiyuanliu/Hepan)

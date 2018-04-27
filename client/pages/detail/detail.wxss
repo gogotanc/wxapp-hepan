@@ -31,6 +31,7 @@
 }
 
 .content-header-info {
+    flex: 1;
 }
 
 .content-header-name {
@@ -45,11 +46,51 @@
 
 
 .content-detail {
-    padding-top: 10rpx;
+    padding-top: 10rpx 0;
 }
 
 .content-text {
     display: inline;
+}
+
+.bottom-option {
+    padding-top: 30rpx;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bottom-left {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-right {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-text {
+    margin: auto 5rpx;
+    color: #b2b2b2;
+    background-color: #eee;
+    padding: 5rpx 10rpx;
+    border-radius: 5rpx;
+    font-size: 14px;
+}
+
+.share-btn {
+    margin: auto 0;
+    font-size: 14px;
+    margin-right: 0rpx;
+    line-height: normal;
+    background: none !important;
+    color: #3594f2;
+}
+
+.share-btn::after {
+    border: none;
 }
 
 /* 回复样式 */

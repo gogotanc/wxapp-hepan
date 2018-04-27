@@ -26,6 +26,16 @@
                 </view>
             </block>
         </view>
+        <view class="bottom-option">
+            <view class="bottom-left">
+                <text class="bottom-text">阅读：{{ topic.hits }}</text>
+                <text class="bottom-text">评论：{{ topic.replies }}</text>
+            </view>
+            <view class="bottom-right">
+                <button class="share-btn" open-type="share">转发</button>
+                <!-- <button class="share-btn" open-type="share">评论</button> -->
+            </view>
+        </view>
     </view>
 
     <block wx:for="{{ reply }}" wx:key="reply_id">
