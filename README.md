@@ -4,6 +4,14 @@
 
 之前主要在写后台，对 `js` 什么的不是很熟悉，有不对的地方希望大家提出来哈，欢迎 `PR`。
 
+扫描下方小程序码使用。
+
+![小程序码](images/qrcode.jpg)
+
+<center>
+    <img src="images/qrcode.jpg">
+</center>
+
 ### 实现的功能
 
 目前实现的功能主要是查看帖子信息：
@@ -84,10 +92,10 @@ http://bbs.uestc.edu.cn/mobcent/app/web/index.php
 ### 截图展示
 
 <div style="float:left;border:solid 1px 000;margin:2px;">
-<img src="images/001-index.png" width="200" height="400">
-<img src="images/002-forum.png" width="200" height="400">
-<img src="images/003-person.png" width="200" height="400">
-<img src="images/004-topic.png" width="200" height="400">
-<img src="images/005-reply.png" width="200" height="400">
-<img src="images/006-board.png" width="200" height="400">
+    <img src="images/001-index.png" width="200" height="400">
+    <img src="images/002-forum.png" width="200" height="400">
+    <img src="images/003-person.png" width="200" height="400">
+    <img src="images/004-topic.png" width="200" height="400">
+    <img src="images/005-reply.png" width="200" height="400">
+    <img src="images/006-board.png" width="200" height="400">
 </div>
