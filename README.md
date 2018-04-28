@@ -80,3 +80,14 @@ http://bbs.uestc.edu.cn/mobcent/app/web/index.php
 [XuChunH/CampusBBS](https://github.com/XuChunH/CampusBBS)
 
 [yiyuanliu/Hepan](https://github.com/yiyuanliu/Hepan)
+
+### 截图展示
+
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img src="images/001-index.png" width="200" height="400">
+<img src="images/002-forum.png" width="200" height="400">
+<img src="images/003-person.png" width="200" height="400">
+<img src="images/004-topic.png" width="200" height="400">
+<img src="images/005-reply.png" width="200" height="400">
+<img src="images/006-board.png" width="200" height="400">
+</div>

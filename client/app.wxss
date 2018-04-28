@@ -162,7 +162,7 @@ page {
 /* person,forum page */
 .logo {
     display: block;
-    margin: 50px auto;
+    margin: 30px auto;
     width: 100px;
     height: 100px;
     border-radius:100%;
