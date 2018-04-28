@@ -1,0 +1,15 @@
+<view class="container">
+    <form bindsubmit="submitForm">
+        <view class="form-panel">
+            <view class="form-item">
+                <textarea class="input-area" placeholder="{{ str }}" name="content" auto-focus></textarea>
+            </view>
+            <view class="form-btn-group">
+                <button class="form-btn form-btn-primary" form-type="submit">确认评论</button>
+                <button class="form-btn" form-type="reset">重置数据</button>
+                <button class="form-btn" bindtap="goBack">取消评论</button>
+            </view>
+        </view>
+    </form>
+</view>
+

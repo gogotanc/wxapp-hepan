@@ -47,7 +47,7 @@
                         <view class="reply-header-name">{{ item.author }}</view>
                         <view class="reply-header-time">{{ item.time }}</view>
                     </view>
-                    <view class="reply-check" bindtap="replyReply" data-rid="{{ item.reply_id }}">评论</view>
+                    <view class="reply-check" bindtap="replyReply" data-rid="{{ item.reply_id }}" data-str="回复：{{ item.author }}">评论</view>
                 </view>
             </view>
             <view class="reply-detail">

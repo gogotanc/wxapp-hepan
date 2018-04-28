@@ -21,13 +21,21 @@ Page({
     replyTopic: function () {
         var tid = this.data.topic.id
         console.log(tid)
+
+        wx.navigateTo({
+            url: '../reply/reply?tid=' + tid
+        })
     },
 
     // 点击回复评论
     replyReply: function (e) {
         var rid = e.currentTarget.dataset.rid
         var tid = this.data.topic.id
+        var str = e.currentTarget.dataset.str
         console.log(e.currentTarget.dataset.rid)
+        wx.navigateTo({
+            url: '../reply/reply?tid=' + tid + '&rid=' + rid + '&str=' + str
+        })
     },
 
     // 点击转发按钮触发的事件

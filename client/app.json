@@ -5,6 +5,7 @@
     "pages/person/person",
     "pages/list/list",
     "pages/my/my",
+    "pages/reply/reply",
     "pages/detail/detail"
   ],
   "window": {

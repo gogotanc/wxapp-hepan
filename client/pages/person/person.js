@@ -111,49 +111,5 @@ Page({
             loginFlag: app.globalData.loginFlag,
             userInfo: app.globalData.userInfo
         })
-
-
-        // 评论内容
-        var content = [
-            {
-                "infor": "测试",
-                "type": 0
-            }
-        ]
-
-        // 测试
-        var json = {
-            "body": {
-                "json": {
-                    "content": JSON.stringify(content),
-                    "contentList": content,
-                    "fid": 0,
-                    "isAnonymous": 0,
-                    "isOnlyAuthor": 0,
-                    "isQuote": 1,
-                    "replyId": 30720318,
-                    "tid": 1711193,
-                    "typeId": 0
-                }
-            }
-        }
-
-        // wx.request({
-        //     url: app.globalData.url,
-        //     method: 'POST',
-        //     header: {
-        //         'content-type': 'application/x-www-form-urlencoded;charset=UTF-8'
-        //     },
-        //     data: {
-        //         r: 'forum/topicadmin',
-        //         accessToken: app.globalData.loginFlag ? app.globalData.userInfo.token : '',
-        //         accessSecret: app.globalData.loginFlag ? app.globalData.userInfo.secret : '',
-        //         act: 'reply',
-        //         json: JSON.stringify(json)
-        //     },
-        //     success: function (res) {
-        //         console.log(res)
-        //     }
-        // })
     }
 })
