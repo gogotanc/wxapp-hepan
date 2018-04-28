@@ -151,6 +151,22 @@ Page({
         this.setData({
             type: options.type
         })
+
+        // 设置窗口标题
+        var title = '清水河畔'
+        var type = options.type
+        if (type == 'topic') {
+            title = '发表的主题'
+        } else if (type == 'favorite') {
+            title = '收藏的主题'
+        } else if (type == 'reply') {
+            title = '评论过的主题'
+        }
+        wx.setNavigationBarTitle({
+            title: title
+        })
+
+        // 下拉刷新获取数据
         wx.startPullDownRefresh()
     }
 })

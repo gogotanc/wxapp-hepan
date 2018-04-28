@@ -11,8 +11,9 @@ Page({
     // 进入某个版块
     viewList: function (e) {
         var board_id = e.currentTarget.dataset.id
+        var board_name = e.currentTarget.dataset.name
         wx.navigateTo({
-            url: '../list/list?id=' + board_id,
+            url: '../list/list?id=' + board_id + '&name=' + board_name,
         })
     },
 

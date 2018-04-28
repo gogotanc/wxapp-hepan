@@ -175,6 +175,11 @@ Page({
         this.setData({
             board_id: options.id
         })
+
+        wx.setNavigationBarTitle({
+            title: options.name
+        })
+
         wx.startPullDownRefresh()
     }
 })
