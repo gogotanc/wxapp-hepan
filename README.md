@@ -8,10 +8,6 @@
 
 ![小程序码](images/qrcode.jpg)
 
-<center>
-    <img src="images/qrcode.jpg">
-</center>
-
 ### 实现的功能
 
 目前实现的功能主要是查看帖子信息：
