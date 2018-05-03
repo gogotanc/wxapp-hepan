@@ -81,6 +81,8 @@ http://bbs.uestc.edu.cn/mobcent/app/web/index.php
 
 [yiyuanliu/Hepan](https://github.com/yiyuanliu/Hepan)
 
+更多 API 信息见[这里](https://github.com/gogotanc/wxapp-hepan/issues/1)
+
 ### 截图展示
 
 <div style="float:left;border:solid 1px 000;margin:2px;">
